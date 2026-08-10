@@ -953,9 +953,6 @@ footer {
   .section {
     padding-block: 78px;
   }
-  .kicker {
-    font-size: 9px;
-  }
   .about-layout {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1070,6 +1067,9 @@ footer {
   }
   .skills-table article {
     padding-inline: 22px;
+  }
+  .skills-table .index {
+    margin-bottom: 16px;
   }
   .project-group h3 {
     font-size: clamp(23px, 3vw, 32px);
