@@ -33,7 +33,7 @@ if (contactScene && background) {
 }
 
 // Reveal each major page section as it enters the viewport.
-const revealSections = document.querySelectorAll("main > section, .contact, footer");
+const revealSections = document.querySelectorAll("main > section, .contact");
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
     (entries, observer) => {

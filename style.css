@@ -633,6 +633,9 @@ nav {
 footer {
   position: relative;
   z-index: 2;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -886,6 +889,9 @@ footer {
   }
   .hero-statement {
     font-size: clamp(30px, 6vw, 64px);
+  }
+  .kicker {
+    font-size: 10px;
   }
   .button{
     font-size: 13px;
