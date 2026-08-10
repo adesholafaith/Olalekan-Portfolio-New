@@ -1020,6 +1020,9 @@ footer {
 }
 
 @media (max-width: 520px) {
+  .logo {
+    font-size: 13px;
+  }
   .logo-text {
     display: none;
   }
@@ -1031,10 +1034,17 @@ footer {
     grid-template-columns: 1fr;
   }
   .hero-copy {
-    padding-block: 54px 48px;
+    padding-block: 11px 22px;
   }
   .hero-statement br {
     display: none;
+  }
+  .hero-statement {
+    font-size: clamp(30px, 6vw, 64px);
+  }
+  .button{
+    font-size: 13px;
+    padding: 0 17px;
   }
   .portrait-wrap {
     order: -1;
@@ -1043,20 +1053,42 @@ footer {
   .portrait-wrap img {
     width: min(76vw, 270px);
   }
+  .section {
+    padding-block: 50px;
+  }
+  .about-layout h2, .projects h2, .skills h2, .experience h2 {
+    font-size: clamp(27px, 4.6vw, 50px);
+  }
+  .skills h2, .experience h2 {
+    margin-bottom: 50px;
+  }
+  .skills-table {
+    grid-template-columns: 1fr;
+  }
+  .education h3 {
+    font-size: 21px;
+  }
   .skills-table article {
     padding-inline: 22px;
   }
+  .project-group h3 {
+    font-size: clamp(23px, 3vw, 32px);
+  }
+  .experience-head h3 {
+    font-size: clamp(24px, 3.2vw, 32px);
+  }
   .contact h2 {
-    font-size: clamp(39px, 12vw, 44px);
+    font-size: clamp(31px, 12vw, 33px);
   }
   footer {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 24px;
+    justify-content: center;
+  }
+  .footer-img {
+    width: 20px;
+    height: 20px;
   }
   .footer-links {
-    width: 100%;
-    justify-content: space-between;
+    display: none;
   }
 }
 
