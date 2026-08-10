@@ -32,6 +32,28 @@ if (contactScene && background) {
   animate();
 }
 
+// Reveal each major page section as it enters the viewport.
+const revealSections = document.querySelectorAll("main > section, .contact, footer");
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-revealed");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+  );
+
+  revealSections.forEach((section) => {
+    section.classList.add("reveal-on-scroll");
+    revealObserver.observe(section);
+  });
+} else {
+  revealSections.forEach((section) => section.classList.add("is-revealed"));
+}
+
 // Move the About emphasis to the paragraph currently being hovered.
 const aboutParagraphs = [...document.querySelectorAll(".about-copy p")];
 if (aboutParagraphs.length) {
