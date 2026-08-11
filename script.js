@@ -1,3 +1,26 @@
+history.scrollRestoration = "manual";
+
+  window.addEventListener("load", () => {
+    history.replaceState(null, "", window.location.pathname);
+    window.scrollTo(0, 0);
+});
+
+document.querySelectorAll(".button-secondary, .nav-cta").forEach(link => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const target = this.dataset.target
+      ? document.getElementById(this.dataset.target)
+      : document.querySelector(this.getAttribute("href"));
+
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  });
+});
+
 const contactScene = document.querySelector(".contact-footer-scene");
 const background = contactScene?.querySelector(".contact-background");
 
