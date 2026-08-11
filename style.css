@@ -702,7 +702,7 @@ footer {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
- @media (hover: hover) and (pointer: fine) {
+ /* @media (hover: hover) and (pointer: fine) {
   body,
   a,
   button,
@@ -735,7 +735,7 @@ footer {
     width: 42px;
     height: 42px;
   }
-}
+} */
 
 /* Current responsive layout */
 @media (max-width: 1100px) {
